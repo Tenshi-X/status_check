@@ -292,3 +292,346 @@ Array
 
 )
 
+Start scanning network at 2024-07-23 09:59:32
+Nmap output:
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-07-23 14:59 SE Asia Standard Time
+Nmap scan report for 192.168.1.1
+Host is up (0.0050s latency).
+MAC Address: 78:91:E9:BF:97:7C (Raisecom Technology)
+Nmap scan report for 192.168.1.4
+Host is up (0.080s latency).
+MAC Address: E0:1F:88:70:B2:C8 (Xiaomi Communications)
+Nmap scan report for 192.168.1.5
+Host is up (0.18s latency).
+MAC Address: CA:28:99:BC:D2:9A (Unknown)
+Nmap scan report for 192.168.1.7
+Host is up (0.17s latency).
+MAC Address: 80:91:33:F8:C4:7D (AzureWave Technology)
+Nmap scan report for 192.168.1.11
+Host is up (1.1s latency).
+MAC Address: BA:8F:79:72:F8:71 (Unknown)
+Nmap scan report for 192.168.1.12
+Host is up (1.6s latency).
+MAC Address: 7A:6B:48:AE:B7:EF (Unknown)
+Nmap scan report for 192.168.1.19
+Host is up (0.57s latency).
+MAC Address: F2:1A:38:BC:8A:55 (Unknown)
+Nmap scan report for 192.168.1.13
+Host is up.
+Nmap done: 256 IP addresses (8 hosts up) scanned in 19.82 seconds
+
+Devices found:
+Array
+(
+    [0] => 192.168.1.1
+    [1] => 192.168.1.4
+    [2] => 192.168.1.5
+    [3] => 192.168.1.7
+    [4] => 192.168.1.11
+    [5] => 192.168.1.12
+    [6] => 192.168.1.19
+    [7] => 192.168.1.13
+)
+
+Start scanning network at 2024-07-23 09:59:57
+Start scanning network at 2024-07-23 10:00:02
+Start scanning network at 2024-07-23 10:00:07
+Start scanning network at 2024-07-23 10:00:12
+Start scanning network at 2024-07-23 10:00:17
+Start scanning network at 2024-07-23 10:00:22
+Start scanning network at 2024-07-23 10:00:27
+Start scanning network at 2024-07-23 10:03:16
+Nmap output:
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-07-23 15:03 SE Asia Standard Time
+Nmap scan report for 192.168.1.1
+Host is up (0.0030s latency).
+MAC Address: 78:91:E9:BF:97:7C (Raisecom Technology)
+Nmap scan report for 192.168.1.2
+Host is up (2.4s latency).
+MAC Address: 32:CF:54:48:A7:DB (Unknown)
+Nmap scan report for 192.168.1.4
+Host is up (2.4s latency).
+MAC Address: E0:1F:88:70:B2:C8 (Xiaomi Communications)
+Nmap scan report for 192.168.1.5
+Host is up (0.14s latency).
+MAC Address: CA:28:99:BC:D2:9A (Unknown)
+Nmap scan report for 192.168.1.7
+Host is up (0.12s latency).
+MAC Address: 80:91:33:F8:C4:7D (AzureWave Technology)
+Nmap scan report for 192.168.1.11
+Host is up (0.53s latency).
+MAC Address: BA:8F:79:72:F8:71 (Unknown)
+Nmap scan report for 192.168.1.12
+Host is up (1.2s latency).
+MAC Address: 7A:6B:48:AE:B7:EF (Unknown)
+Nmap scan report for 192.168.1.19
+Host is up (0.67s latency).
+MAC Address: F2:1A:38:BC:8A:55 (Unknown)
+Nmap scan report for 192.168.1.13
+Host is up.
+Nmap done: 256 IP addresses (9 hosts up) scanned in 14.01 seconds
+
+Devices found:
+Array
+(
+    [0] => 192.168.1.1
+    [1] => 192.168.1.2
+    [2] => 192.168.1.4
+    [3] => 192.168.1.5
+    [4] => 192.168.1.7
+    [5] => 192.168.1.11
+    [6] => 192.168.1.12
+    [7] => 192.168.1.19
+    [8] => 192.168.1.13
+)
+
+Start scanning network at 2024-07-23 10:03:36
+Start scanning network at 2024-07-23 10:03:41
+Start scanning network at 2024-07-23 10:03:46
+Start scanning network at 2024-07-23 10:03:51
+Start scanning network at 2024-07-23 10:03:56
+Start scanning network at 2024-07-23 10:04:01
+Start scanning network at 2024-07-23 10:04:06
+Start scanning network at 2024-07-23 10:04:11
+Start scanning network at 2024-07-23 10:04:16
+Finished scanning network at 2024-07-23 10:04:16
+Device list:
+Array
+(
+    [0] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.1
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [1] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.2
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [2] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.4
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [3] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.5
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [4] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.7
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [5] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.11
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [6] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.12
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [7] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.19
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [8] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.13
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+)
+
+Start scanning network at 2024-07-23 10:15:07
+Nmap output:
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-07-23 15:15 SE Asia Standard Time
+Nmap scan report for 192.168.1.1
+Host is up (0.0040s latency).
+MAC Address: 78:91:E9:BF:97:7C (Raisecom Technology)
+Nmap scan report for 192.168.1.7
+Host is up (0.17s latency).
+MAC Address: 80:91:33:F8:C4:7D (AzureWave Technology)
+Nmap scan report for 192.168.1.11
+Host is up (0.90s latency).
+MAC Address: BA:8F:79:72:F8:71 (Unknown)
+Nmap scan report for 192.168.1.12
+Host is up (0.80s latency).
+MAC Address: 7A:6B:48:AE:B7:EF (Unknown)
+Nmap scan report for 192.168.1.14
+Host is up (0.39s latency).
+MAC Address: C8:8A:9A:84:67:50 (Intel Corporate)
+Nmap scan report for 192.168.1.19
+Host is up (1.1s latency).
+MAC Address: F2:1A:38:BC:8A:55 (Unknown)
+Nmap scan report for 192.168.1.13
+Host is up.
+Nmap done: 256 IP addresses (7 hosts up) scanned in 26.64 seconds
+
+Devices found:
+Array
+(
+    [0] => 192.168.1.1
+    [1] => 192.168.1.7
+    [2] => 192.168.1.11
+    [3] => 192.168.1.12
+    [4] => 192.168.1.14
+    [5] => 192.168.1.19
+    [6] => 192.168.1.13
+)
+
+Finished scanning network at 2024-07-23 10:15:46
+Device list:
+Array
+(
+    [0] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.1
+            [responseStatus] => 200 (Success)
+            [status] => Active
+            [statusClass] => status-active
+        )
+
+    [1] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.7
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [2] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.11
+            [responseStatus] => 200 (Success)
+            [status] => Active
+            [statusClass] => status-active
+        )
+
+    [3] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.12
+            [responseStatus] => 200 (Success)
+            [status] => Active
+            [statusClass] => status-active
+        )
+
+    [4] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.14
+            [responseStatus] => 200 (Success)
+            [status] => Active
+            [statusClass] => status-active
+        )
+
+    [5] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.19
+            [responseStatus] => 200 (Success)
+            [status] => Active
+            [statusClass] => status-active
+        )
+
+    [6] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.13
+            [responseStatus] => 200 (Success)
+            [status] => Active
+            [statusClass] => status-active
+        )
+
+)
+
+Start scanning network at 2024-07-23 10:17:55
+Nmap output:
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-07-23 15:17 SE Asia Standard Time
+Nmap scan report for 192.168.1.1
+Host is up (0.0040s latency).
+MAC Address: 78:91:E9:BF:97:7C (Raisecom Technology)
+Nmap scan report for 192.168.1.4
+Host is up (1.0s latency).
+MAC Address: E0:1F:88:70:B2:C8 (Xiaomi Communications)
+Nmap scan report for 192.168.1.5
+Host is up (0.31s latency).
+MAC Address: CA:28:99:BC:D2:9A (Unknown)
+Nmap scan report for 192.168.1.7
+Host is up (0.15s latency).
+MAC Address: 80:91:33:F8:C4:7D (AzureWave Technology)
+Nmap scan report for 192.168.1.12
+Host is up (0.97s latency).
+MAC Address: 7A:6B:48:AE:B7:EF (Unknown)
+Nmap scan report for 192.168.1.14
+Host is up (0.80s latency).
+MAC Address: C8:8A:9A:84:67:50 (Intel Corporate)
+Nmap scan report for 192.168.1.19
+Host is up (0.40s latency).
+MAC Address: F2:1A:38:BC:8A:55 (Unknown)
+Nmap scan report for 192.168.1.13
+Host is up.
+Nmap done: 256 IP addresses (8 hosts up) scanned in 23.86 seconds
+
+Devices found:
+Array
+(
+    [0] => 192.168.1.1
+    [1] => 192.168.1.4
+    [2] => 192.168.1.5
+    [3] => 192.168.1.7
+    [4] => 192.168.1.12
+    [5] => 192.168.1.14
+    [6] => 192.168.1.19
+    [7] => 192.168.1.13
+)
+
+Pinging IP: 192.168.1.1 - 200 (Success)
+Pinging IP: 192.168.1.4 - 200 (Success)
+Pinging IP: 192.168.1.5 - 200 (Success)
+Pinging IP: 192.168.1.7 - 500 (Bad Request)
+Pinging IP: 192.168.1.12 - 200 (Success)
+Start scanning network at 2024-07-23 10:19:38
+Start scanning network at 2024-07-23 10:21:09

@@ -7,10 +7,11 @@ function logMessage($message) {
     $current .= $message . "\n";
     file_put_contents($logFile, $current);
 }
+
 function ping($ip) {
     $output = [];
-    $result = shell_exec("ping -c 1 " . escapeshellarg($ip));
-    if (strpos($result, '1 received')) {
+    $result = shell_exec("ping -n 1 " . escapeshellarg($ip)); // Adjust this for Windows
+    if (strpos($result, 'Reply from') !== false || strpos($result, '1 received') !== false) {
         return "200 (Success)";
     } else {
         return "500 (Bad Request)";
@@ -34,11 +35,9 @@ $subnet = "192.168.1.0/24"; // Ganti sesuai dengan subnet Anda
 $devices = scanNetwork($subnet);
 $deviceList = [];
 
-
 foreach ($devices as $ip) {
-    sleep(5);
+    sleep(1); // Reduce sleep time for faster response
     $responseStatus = ping($ip);
-    logMessage("Start scanning network at " . date('Y-m-d H:i:s'));
     $status = (strpos($responseStatus, "200") !== false) ? "Active" : "Inactive";
     $statusClass = (strpos($responseStatus, "200") !== false) ? "status-active" : "status-inactive";
     $deviceList[] = [
@@ -49,7 +48,6 @@ foreach ($devices as $ip) {
         'statusClass' => $statusClass
     ];
 }
-
 
 logMessage("Finished scanning network at " . date('Y-m-d H:i:s'));
 logMessage("Device list:\n" . print_r($deviceList, true));

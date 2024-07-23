@@ -1,0 +1,294 @@
+Start scanning network at 2024-07-23 07:13:45
+Finished scanning network at 2024-07-23 07:13:45
+Start scanning network at 2024-07-23 07:13:45
+Finished scanning network at 2024-07-23 07:13:45
+Start scanning network at 2024-07-23 07:13:46
+Finished scanning network at 2024-07-23 07:13:46
+Start scanning network at 2024-07-23 07:13:46
+Finished scanning network at 2024-07-23 07:13:46
+Start scanning network at 2024-07-23 07:13:46
+Finished scanning network at 2024-07-23 07:13:46
+Start scanning network at 2024-07-23 07:13:46
+Finished scanning network at 2024-07-23 07:13:46
+Start scanning network at 2024-07-23 07:13:47
+Finished scanning network at 2024-07-23 07:13:47
+Start scanning network at 2024-07-23 07:13:47
+Finished scanning network at 2024-07-23 07:13:47
+Start scanning network at 2024-07-23 07:13:47
+Finished scanning network at 2024-07-23 07:13:47
+Start scanning network at 2024-07-23 07:13:47
+Finished scanning network at 2024-07-23 07:13:47
+Start scanning network at 2024-07-23 07:13:47
+Finished scanning network at 2024-07-23 07:13:47
+Start scanning network at 2024-07-23 07:13:47
+Finished scanning network at 2024-07-23 07:13:48
+Start scanning network at 2024-07-23 07:14:08
+Finished scanning network at 2024-07-23 07:14:08
+Start scanning network at 2024-07-23 07:14:09
+Finished scanning network at 2024-07-23 07:14:09
+Start scanning network at 2024-07-23 07:14:10
+Finished scanning network at 2024-07-23 07:14:10
+Start scanning network at 2024-07-23 07:14:10
+Finished scanning network at 2024-07-23 07:14:10
+Start scanning network at 2024-07-23 07:14:11
+Finished scanning network at 2024-07-23 07:14:11
+Start scanning network at 2024-07-23 07:14:11
+Finished scanning network at 2024-07-23 07:14:11
+Start scanning network at 2024-07-23 07:14:12
+Finished scanning network at 2024-07-23 07:14:12
+Start scanning network at 2024-07-23 07:14:12
+Finished scanning network at 2024-07-23 07:14:12
+Start scanning network at 2024-07-23 07:14:13
+Finished scanning network at 2024-07-23 07:14:13
+Start scanning network at 2024-07-23 07:14:13
+Finished scanning network at 2024-07-23 07:14:13
+Start scanning network at 2024-07-23 07:14:14
+Finished scanning network at 2024-07-23 07:14:14
+Start scanning network at 2024-07-23 07:14:14
+Finished scanning network at 2024-07-23 07:14:14
+Start scanning network at 2024-07-23 07:16:11
+Finished scanning network at 2024-07-23 07:16:11
+Start scanning network at 2024-07-23 07:16:12
+Finished scanning network at 2024-07-23 07:16:12
+Start scanning network at 2024-07-23 07:17:06
+Finished scanning network at 2024-07-23 07:17:06
+Start scanning network at 2024-07-23 07:21:59
+Nmap output:
+
+Devices found:
+Array
+(
+)
+
+Finished scanning network at 2024-07-23 07:21:59
+Device list:
+Array
+(
+)
+
+Start scanning network at 2024-07-23 07:28:08
+Nmap output:
+
+Devices found:
+Array
+(
+)
+
+Finished scanning network at 2024-07-23 07:28:08
+Device list:
+Array
+(
+)
+
+Start scanning network at 2024-07-23 07:39:02
+Nmap output:
+
+Devices found:
+Array
+(
+)
+
+Finished scanning network at 2024-07-23 07:39:02
+Device list:
+Array
+(
+)
+
+Start scanning network at 2024-07-23 07:42:48
+Nmap output:
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-07-23 12:42 SE Asia Standard Time
+Nmap scan report for 192.168.1.1
+Host is up (0.0050s latency).
+MAC Address: 78:91:E9:BF:97:7C (Raisecom Technology)
+Nmap scan report for 192.168.1.4
+Host is up (0.074s latency).
+MAC Address: E0:1F:88:70:B2:C8 (Xiaomi Communications)
+Nmap scan report for 192.168.1.7
+Host is up (0.58s latency).
+MAC Address: 80:91:33:F8:C4:7D (AzureWave Technology)
+Nmap scan report for 192.168.1.11
+Host is up (0.60s latency).
+MAC Address: BA:8F:79:72:F8:71 (Unknown)
+Nmap scan report for 192.168.1.12
+Host is up (0.51s latency).
+MAC Address: 7A:6B:48:AE:B7:EF (Unknown)
+Nmap scan report for 192.168.1.13
+Host is up.
+Nmap done: 256 IP addresses (6 hosts up) scanned in 16.70 seconds
+
+Devices found:
+Array
+(
+    [0] => 192.168.1.1
+    [1] => 192.168.1.4
+    [2] => 192.168.1.7
+    [3] => 192.168.1.11
+    [4] => 192.168.1.12
+    [5] => 192.168.1.13
+)
+
+Start scanning network at 2024-07-23 07:43:10
+Start scanning network at 2024-07-23 07:43:15
+Start scanning network at 2024-07-23 07:43:20
+Start scanning network at 2024-07-23 07:43:25
+Start scanning network at 2024-07-23 07:43:30
+Start scanning network at 2024-07-23 07:43:35
+Finished scanning network at 2024-07-23 07:43:35
+Device list:
+Array
+(
+    [0] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.1
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [1] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.4
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [2] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.7
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [3] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.11
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [4] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.12
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [5] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.13
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+)
+
+Start scanning network at 2024-07-23 07:46:22
+Nmap output:
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-07-23 12:46 SE Asia Standard Time
+Nmap scan report for 192.168.1.1
+Host is up (0.010s latency).
+MAC Address: 78:91:E9:BF:97:7C (Raisecom Technology)
+Nmap scan report for 192.168.1.4
+Host is up (0.11s latency).
+MAC Address: E0:1F:88:70:B2:C8 (Xiaomi Communications)
+Nmap scan report for 192.168.1.7
+Host is up (0.43s latency).
+MAC Address: 80:91:33:F8:C4:7D (AzureWave Technology)
+Nmap scan report for 192.168.1.11
+Host is up (2.2s latency).
+MAC Address: BA:8F:79:72:F8:71 (Unknown)
+Nmap scan report for 192.168.1.12
+Host is up (2.0s latency).
+MAC Address: 7A:6B:48:AE:B7:EF (Unknown)
+Nmap scan report for 192.168.1.13
+Host is up.
+Nmap done: 256 IP addresses (6 hosts up) scanned in 15.55 seconds
+
+Devices found:
+Array
+(
+    [0] => 192.168.1.1
+    [1] => 192.168.1.4
+    [2] => 192.168.1.7
+    [3] => 192.168.1.11
+    [4] => 192.168.1.12
+    [5] => 192.168.1.13
+)
+
+Start scanning network at 2024-07-23 07:46:43
+Start scanning network at 2024-07-23 07:46:48
+Start scanning network at 2024-07-23 07:46:53
+Start scanning network at 2024-07-23 07:46:58
+Start scanning network at 2024-07-23 07:47:03
+Start scanning network at 2024-07-23 07:47:08
+Finished scanning network at 2024-07-23 07:47:08
+Device list:
+Array
+(
+    [0] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.1
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [1] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.4
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [2] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.7
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [3] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.11
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [4] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.12
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+    [5] => Array
+        (
+            [name] => Device
+            [ip] => 192.168.1.13
+            [responseStatus] => 500 (Bad Request)
+            [status] => Inactive
+            [statusClass] => status-inactive
+        )
+
+)
+

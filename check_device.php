@@ -2,18 +2,19 @@
 $input = json_decode(file_get_contents('php://input'), true);
 $devicesFile = 'devices.json';
 
-if (!isset($input['name']) || !isset($input['ip'])) {
+if (!isset($input['id']) || !isset($input['ip'])) {
     echo json_encode(['success' => false]);
     exit;
 }
 
-$name = $input['name'];
+$id = $input['id'];
 $ip = $input['ip'];
 
 if (file_exists($devicesFile)) {
     $devices = json_decode(file_get_contents($devicesFile), true);
 } else {
-    $devices = [];
+    echo json_encode(['success' => false]);
+    exit;
 }
 
 function ping($ip) {
@@ -39,18 +40,22 @@ $responseStatus = ping($ip);
 $status = (strpos($responseStatus, "200") !== false) ? "Active" : "Inactive";
 $statusClass = (strpos($responseStatus, "200") !== false) ? "status-active" : "status-inactive";
 
-$deviceId = uniqid(); // Generate a unique ID for the device
-
-$devices[] = [
-    'id' => $deviceId, // Add the ID to the device
-    'name' => $name,
-    'ip' => $ip,
-    'responseStatus' => $responseStatus,
-    'status' => $status,
-    'statusClass' => $statusClass
-];
+// Update the device in the list
+foreach ($devices as &$device) {
+    if ($device['id'] === $id) {
+        $device['responseStatus'] = $responseStatus;
+        $device['status'] = $status;
+        $device['statusClass'] = $statusClass;
+        break;
+    }
+}
 
 file_put_contents($devicesFile, json_encode($devices));
 
-echo json_encode(['success' => true]);
+echo json_encode([
+    'success' => true,
+    'status' => $status,
+    'responseStatus' => $responseStatus,
+    'statusClass' => $statusClass
+]);
 ?>

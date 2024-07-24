@@ -20,23 +20,21 @@
         }
         .status-inactive {
             color: #fff;
-            background-color: #dc3545;
+            background-color: #ffc107; /* Yellow for better differentiation */
             border-radius: 5px;
             padding: 5px 10px;
         }
         .btn-primary {
             background-color: #6f42c1;
             color: #fff;
-            border-radius: 5px;
-            padding: 10px 20px;
             border: none;
             cursor: pointer;
         }
-        .btn-check:hover {
+        .btn-primary:hover {
             background-color: #5a359c;
         }
         .btn-delete {
-            background-color: #dc3545;
+            background-color: #007bff; /* Blue for better differentiation */
             color: #fff;
             border-radius: 5px;
             padding: 5px 10px;
@@ -44,7 +42,7 @@
             cursor: pointer;
         }
         .btn-delete:hover {
-            background-color: #c82333;
+            background-color: #0056b3;
         }
         #loading {
             display: none;
@@ -60,6 +58,7 @@
     <div class="container mt-5">
         <h3>All Devices</h3>
         <button id="addDeviceButton" class="btn btn-primary" onclick="location.href='add_device.php'">Add Device</button>
+        <button id="checkAllButton" class="btn btn-success" onclick="checkAllDevices()">Check All Devices</button>
         <div class="table-responsive mt-4">
             <table class="table" id="deviceTable">
                 <thead>
@@ -76,7 +75,7 @@
             </table>
         </div>
         <div id="loading">
-            <img src="https://i.imgur.com/6RMhx.gif" alt="Loading...">
+            <img src="assets/loading_state.gif" alt="Loading...">
             <p>Loading devices, please wait...</p>
         </div>
     </div>
@@ -96,13 +95,16 @@
                     tableBody.innerHTML = '';
                     data.forEach(device => {
                         const row = document.createElement('tr');
-                        row.innerHTML = `
-                            <td>${device.name}</td>
+                        row.setAttribute('data-device-id', device.id);
+                        row.innerHTML = 
+                            `<td>${device.name}</td>
                             <td>${device.ip}</td>
-                            <td>${device.responseStatus}</td>
+                            <td class="response-status">${device.responseStatus}</td>
                             <td><span class="${device.statusClass}">${device.status}</span></td>
-                            <td><button class="btn btn-delete" onclick="deleteDevice('${device.id}')">Delete</button></td>
-                        `;
+                            <td>
+                                <button class="btn btn-delete" onclick="deleteDevice('${device.id}')">Delete</button>
+                                <button class="btn btn-check" onclick="checkDevice('${device.id}', '${device.ip}')">Check</button>
+                            </td>`;
                         tableBody.appendChild(row);
                     });
                 })
@@ -134,6 +136,66 @@
                     console.error('Error:', error);
                 });
             }
+        }
+
+        function checkDevice(deviceId, ip) {
+            fetch('check_device.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ id: deviceId, ip: ip })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.success) {
+                    const row = document.querySelector(`tr[data-device-id="${deviceId}"]`);
+                    row.querySelector('.response-status').textContent = data.responseStatus;
+                    const statusElement = row.querySelector('span');
+                    statusElement.textContent = data.status;
+                    statusElement.className = data.statusClass;
+                } else {
+                    alert('Failed to check device');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+        function checkAllDevices() {
+            document.getElementById('loading').style.display = 'block';
+            fetch('fetch_devices.php')
+                .then(response => response.json())
+                .then(data => {
+                    const promises = data.map(device => {
+                        return fetch('check_device.php', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ id: device.id, ip: device.ip })
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if(data.success) {
+                                const row = document.querySelector(`tr[data-device-id="${device.id}"]`);
+                                row.querySelector('.response-status').textContent = data.responseStatus;
+                                const statusElement = row.querySelector('span');
+                                statusElement.textContent = data.status;
+                                statusElement.className = data.statusClass;
+                            }
+                        })
+                        .catch(error => console.error('Error:', error));
+                    });
+                    Promise.all(promises).then(() => {
+                        document.getElementById('loading').style.display = 'none';
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('loading').style.display = 'none';
+                });
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -21,7 +21,7 @@
             <button type="submit" class="btn btn-primary">Add Device</button>
         </form>
         <div id="loading" style="display: none;">
-            <img src="https://i.imgur.com/6RMhx.gif" alt="Loading...">
+            <img src="assets/loading_state.gif" alt="Loading...">
             <p>Adding device, please wait...</p>
         </div>
     </div>

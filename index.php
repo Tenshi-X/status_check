@@ -35,13 +35,16 @@
         .btn-check:hover {
             background-color: #5a359c;
         }
-        #loading {
-            display: none;
-            text-align: center;
-            margin-top: 20px;
+        .btn-delete {
+            background-color: #dc3545;
+            color: #fff;
+            border-radius: 5px;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
         }
-        #loading img {
-            width: 50px;
+        .btn-delete:hover {
+            background-color: #c82333;
         }
         #loading {
             display: none;
@@ -56,8 +59,8 @@
 <body>
     <div class="container mt-5">
         <h3>All Devices</h3>
-        <p class="text-primary">Active devices</p>
-        <div class="table-responsive">
+        <button id="addDeviceButton" class="btn btn-primary" onclick="location.href='add_device.php'">Add Device</button>
+        <div class="table-responsive mt-4">
             <table class="table" id="deviceTable">
                 <thead>
                     <tr>
@@ -65,49 +68,73 @@
                         <th>IP Address</th>
                         <th>Response Status</th>
                         <th>Status</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                 </tbody>
             </table>
         </div>
-        <button id="scanButton" class="btn btn-primary">Check</button>
         <div id="loading">
             <img src="https://i.imgur.com/6RMhx.gif" alt="Loading...">
-            <p>Scanning network, please wait...</p>
+            <p>Loading devices, please wait...</p>
         </div>
     </div>
     <script>
-       document.getElementById('scanButton').addEventListener('click', function() {
-    console.log("Button clicked, starting scan...");
-    document.getElementById('loading').style.display = 'block';
-    fetch('scan.php', { method: 'GET', timeout: 60000 })
-        .then(response => {
-            console.log("Received response from scan.php");
-            return response.json();
-        })
-        .then(data => {
-            console.log("Data received:", data);
-            document.getElementById('loading').style.display = 'none';
-            const tableBody = document.querySelector('#deviceTable tbody');
-            tableBody.innerHTML = '';
-            data.forEach(device => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${device.name}</td>
-                    <td>${device.ip}</td>
-                    <td>${device.responseStatus}</td>
-                    <td><span class="${device.statusClass}">${device.status}</span></td>
-                `;
-                tableBody.appendChild(row);
-            });
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            document.getElementById('loading').style.display = 'none';
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("Page loaded, starting to fetch devices...");
+            document.getElementById('loading').style.display = 'block';
+            fetch('fetch_devices.php')
+                .then(response => {
+                    console.log("Received response from fetch_devices.php");
+                    return response.json();
+                })
+                .then(data => {
+                    console.log("Data received:", data);
+                    document.getElementById('loading').style.display = 'none';
+                    const tableBody = document.querySelector('#deviceTable tbody');
+                    tableBody.innerHTML = '';
+                    data.forEach(device => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${device.name}</td>
+                            <td>${device.ip}</td>
+                            <td>${device.responseStatus}</td>
+                            <td><span class="${device.statusClass}">${device.status}</span></td>
+                            <td><button class="btn btn-delete" onclick="deleteDevice('${device.id}')">Delete</button></td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('loading').style.display = 'none';
+                });
         });
-});
 
+        function deleteDevice(deviceId) {
+            if(confirm('Are you sure you want to delete this device?')) {
+                fetch('delete_device.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ id: deviceId })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if(data.success) {
+                        alert('Device deleted successfully');
+                        location.reload();
+                    } else {
+                        alert('Failed to delete device');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
